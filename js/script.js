@@ -35,7 +35,7 @@ function generateCanvasImage() {
   canvas.height = height;
 
   // تحديد الخطوط
-  ctx.font = "bold 20px Arial"; // تحديد الخط ليكون عريضًا
+  ctx.font = "bold 22px Arial"; // تحديد الخط ليكون عريضًا
   ctx.fillStyle = "black";
   ctx.textAlign = "center";
 
@@ -69,7 +69,7 @@ function generateCanvasImage() {
     yPosition += 40;
 
     // إضافة الفقرات إلى canvas
-    ctx.font = "bold 18px Cairo"; // تحديد الخط ليكون عريضًا
+    ctx.font = "bold 22px Cairo"; // تحديد الخط ليكون عريضًا
     paragraphs.forEach((paragraph) => {
       const title = paragraph.querySelector(".para-title").value;
       const explainer = paragraph.querySelector(".para-explainer").value;
