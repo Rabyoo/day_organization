@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تنظيم اليوم</title>
+    <!-- CSS Link  -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- JS Script  -->
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="icon-title">
+        <img src="./icons/cross-2-svgrepo-com.svg" style="align-self: flex-start;" alt="icon">
+        <img src="./icons/cross-2-svgrepo-com.svg" style="align-self: flex-end;" alt="icon">
+      </div>
+      <h1>إنشاء جدول لتنظيم اليوم</h1>
+      <label for="day">اليوم:</label>
+      <input type="text" id="day" placeholder="أدخل اليوم" />
+
+      <label for="date">التاريخ:</label>
+      <input type="date" id="date" />
+
+      <label for="dayName">اسم اليوم : </label>
+      <input type="text" id="dayName" placeholder="أدخل اسم اليوم" />
+
+      <label for="dayName">مسؤل اليوم : </label>
+      <input type="text" id="dayManager" placeholder="أدخل اسم مسؤل اليوم" />
+
+      <div class="paragraphs" id="paragraphs">
+        <h3>الفقرات:</h3>
+        <div class="paragraph">
+          <div style="display: flex; justify-content: space-between">
+            <input
+              style="margin-left: 20px; font-size: 16px"
+              type="text"
+              class="para-title"
+              placeholder="اسم الفقرة" />
+            <input
+              type="text"
+              class="para-explainer"
+              placeholder=" اسم الخادم" />
+          </div>
+        </div>
+      </div>
+      <!-- textarea للتعليقات -->
+      <div>
+        <textarea
+          id="comments"
+          placeholder="أضف تعليقك هنا (اختياري)"></textarea>
+      </div>
+
+      <button onclick="addParagraph()">إضافة فقرة</button>
+      <button id="download" onclick="generateCanvasImage()">تنزيل الصورة</button>
+
+      <!-- canvas الذي سيتم رسم الجدول عليه -->
+      <canvas id="myCanvas" style="display: none"></canvas>
+    </div>
+  </body>
+</html>
